@@ -12,6 +12,7 @@ public class Director extends Empleado{
     public Director() {
     }
 
+
     public double getComision() {
         return comision;
     }
@@ -22,12 +23,11 @@ public class Director extends Empleado{
 
     @Override
     public String toString() {
-        return "Director: " +
-                "Departamento: " + getDepartamentos() +
-                ", Num_empleado:  " + getNum_empleado() +
+        return "\n Director: " +
+                "Num_empleado:  " + getNum_empleado() +
                 ", Apellido: '" + getApellido() + '\'' +
                 ", Salario: " + getSalario() +
                 ", FechaAlta: " + getFechaAlta() +
-                "Comisión: " + comision;
+                ", Comisión: " + comision;
     }
 }

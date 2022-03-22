@@ -10,6 +10,7 @@ public class Principal {
 
     public static void main(String[] args) {
         cargaAutomaticaConAgregacion();
+        //cargaAutomaticaConComposicion();
         mostrarDepartamentos();
     }
 
@@ -33,6 +34,9 @@ public class Principal {
         }
      }
 
+     public static void cargaAutomaticaConComposicion(){
+         departamentos.add(new Departamento(90,"Ventas","Malpartida de Cáceres"));
+     }
       static void mostrarDepartamentos(){
           Iterator<Departamento> it = departamentos.iterator();
           while (it.hasNext()){

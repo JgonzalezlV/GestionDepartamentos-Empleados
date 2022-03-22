@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Departamento {
@@ -16,7 +17,9 @@ public class Departamento {
         this.dept_no = dept_no;
         this.dNombre = dNombre;
         this.localizacion = localizacion;
-        this.empleados = empleados;
+        this.empleados = empleados/*= new ArrayList()*/;
+        /*empleados.add(new Analista(11,"Pérez",400, LocalDate.of(1999,12,23),null));
+        empleados.add(new Director(56,"García",3200,LocalDate.of(2000, 4,9),null,450));*/
     }
 
     public int getDept_no() {
@@ -57,6 +60,6 @@ public class Departamento {
                 "Número de departamento: " + dept_no +
                 ", Nombre del departamento: '" + dNombre + '\'' +
                 ", Localización: '" + localizacion + '\'' +
-                ", Empleados: " + empleados;
+                ", \nEmpleados: " + empleados + "\n";
     }
 }

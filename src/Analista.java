@@ -8,8 +8,8 @@ public class Analista extends Empleado{
 
     @Override
     public String toString() {
-        return "Analista: " +
-                ", Num_empleado:  " + getNum_empleado() +
+        return "\n Analista: " +
+                "Num_empleado:  " + getNum_empleado() +
                 ", Apellido: '" + getApellido() + '\'' +
                 ", Salario: " + getSalario() +
                 ", FechaAlta: " + getFechaAlta();
