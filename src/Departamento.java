@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Departamento {
     private int dept_no;
@@ -7,19 +8,21 @@ public class Departamento {
     private String localizacion;
     private ArrayList<Empleado> empleados;
 
+    //Constructor parametrizado para composición.
     public Departamento(int dept_no, String dNombre, String localizacion) {
         this.dept_no = dept_no;
         this.dNombre = dNombre;
         this.localizacion = localizacion;
+        empleados = new ArrayList<Empleado>();
+        empleados.add(new Analista(115,"Pérez",400, LocalDate.of(1999,12,23),null));
+        empleados.add(new Director(562,"López",235,LocalDate.of(1999,5,4),null,340));
     }
-
+    //Constructor parametrizado para agregación.
     public Departamento(int dept_no, String dNombre, String localizacion, ArrayList<Empleado> empleados) {
         this.dept_no = dept_no;
         this.dNombre = dNombre;
         this.localizacion = localizacion;
-        this.empleados = empleados/*= new ArrayList()*/;
-        /*empleados.add(new Analista(11,"Pérez",400, LocalDate.of(1999,12,23),null));
-        empleados.add(new Director(56,"García",3200,LocalDate.of(2000, 4,9),null,450));*/
+        this.empleados = empleados;
     }
 
     public int getDept_no() {
@@ -62,4 +65,5 @@ public class Departamento {
                 ", Localización: '" + localizacion + '\'' +
                 ", \nEmpleados: " + empleados + "\n";
     }
+
 }

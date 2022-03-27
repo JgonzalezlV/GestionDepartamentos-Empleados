@@ -8,7 +8,7 @@ public abstract class Empleado {
     private double salario;
     private LocalDate fechaAlta;
 
-    public Empleado(int num_empleado, String apellido, double salario, LocalDate fechaAlta, ArrayList<Departamento> departamentos) {
+    public Empleado(int num_empleado, String apellido, double salario, LocalDate fechaAlta, Departamento departamentos) {
 
         this.num_empleado = num_empleado;
         this.apellido = apellido;

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Director extends Empleado{
     private double comision;
 
-    public Director(int num_empleado, String apellido, double salario, LocalDate fechaAlta, ArrayList<Departamento> departamentos, double comision) {
+    public Director(int num_empleado, String apellido, double salario, LocalDate fechaAlta, Departamento departamentos, double comision) {
         super(num_empleado, apellido, salario, fechaAlta, departamentos);
         this.comision = comision;
     }
